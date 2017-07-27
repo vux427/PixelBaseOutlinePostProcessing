@@ -139,14 +139,13 @@ public class OutlinePostProcess : MonoBehaviour {
 
         if (!enable) return;
         //GL Clear to reset temporary texture content.
-        Graphics.SetRenderTarget(tempRT1);
+        Graphics.SetRenderTarget(maskTexture);
         GL.Clear(true, true, Color.black);
-        Graphics.SetRenderTarget(tempRT2);
-        GL.Clear(true, true, Color.black);
-
-        //this way to clear camera target temporary texture.  
+        /*
+        //or this way can also.
         maskCam.clearFlags = CameraClearFlags.Color;
         maskCam.backgroundColor = Color.black;
+        */
 
         CopyCameraSetting(postProcessCam,maskCam);
 
