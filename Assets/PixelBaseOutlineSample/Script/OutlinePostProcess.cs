@@ -156,7 +156,7 @@ public class OutlinePostProcess : MonoBehaviour {
             System.Array.ForEach(ignoreLayerIndex, t => total += t);
             maskCam.cullingMask = ~(total);
             maskCam.RenderWithShader(grabDepth.shader,alphaDepth ? "" : "RenderType");
-            maskCam.clearFlags = CameraClearFlags.Nothing;
+            //maskCam.clearFlags = CameraClearFlags.Nothing;
         }
 
         maskCam.cullingMask = 1 << LayerMask.NameToLayer("Outline");
