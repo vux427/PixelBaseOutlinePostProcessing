@@ -15,7 +15,6 @@ public class OutlinePostProcess : MonoBehaviour {
 
                 if (!instance)
                     instance = Camera.main.gameObject.AddComponent<OutlinePostProcess>();
-                var c = (Component)instance;
                 instance.Init();
             }
             return instance;
